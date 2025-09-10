@@ -14,7 +14,7 @@ jobs:
       - name: Docker login
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}   # hvnn1606
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Extract version
@@ -32,5 +32,6 @@ jobs:
           context: .
           push: true
           tags: |
-            your-dockerhub-username/devops5:latest
-            your-dockerhub-username/devops5:${{ steps.vars.outputs.TAG }}
+            hvnn1606/devops5:latest
+            hvnn1606/devops5:${{ steps.vars.outputs.TAG }}
+# hello
